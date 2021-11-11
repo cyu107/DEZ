@@ -1,0 +1,73 @@
+@import "../../static/scss/base.scss";
+
+.navbar-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 2.5rem 5rem 2.5rem 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+
+  @include mobile-lg {
+    padding: 1.28rem 1.3rem 1.5rem 2.08rem;
+  }
+
+  .logo {
+    img {
+      height: 4rem;
+      object-fit: contain;
+
+      @include mobile-lg {
+        height: 1.6rem;
+      }
+    }
+  }
+  .nav-items {
+    margin: 0 -2rem;
+    display: flex;
+    align-items: center;
+
+    @include mobile-lg {
+      display: none;
+    }
+
+    li {
+      width: 15rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 2rem;
+      @include transitionEffect;
+
+      &:hover {
+        filter: brightness(0.7);
+      }
+
+      a {
+        position: relative;
+        text-decoration: none;
+
+        span {
+          font-family: Industry-Book;
+          text-transform: uppercase;
+          font-size: 1.2rem;
+          font-weight: 300;
+          letter-spacing: 0.06rem;
+          line-height: 3.3rem;
+          color: $white;
+        }
+        img {
+          height: 1rem;
+          object-fit: contain;
+          position: absolute;
+          top: 0.5rem;
+          right: -2rem;
+        }
+      }
+    }
+  }
+}

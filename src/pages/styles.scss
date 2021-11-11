@@ -1,0 +1,539 @@
+@import "../static/scss/base.scss";
+
+.landing-wrapper {
+  position: relative;
+
+  .hero-section {
+    .details {
+      height: 104rem;
+      position: relative;
+      overflow: hidden;
+      background: center/cover no-repeat url("../static/images/grid.png");
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include mobile-lg {
+        height: 46rem;
+        background: center 0.2rem / auto 80% no-repeat
+          url("../static/images/grid.png");
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle, #005162 0%, #050a0b 50%);
+        opacity: 0.5;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+
+      > * {
+        position: relative;
+      }
+
+      .dez {
+        height: 15rem;
+        object-fit: contain;
+        margin-top: 42rem;
+        filter: drop-shadow(-1.2rem -1rem 1rem rgba(255, 254, 202, 0.19));
+
+        @include mobile-lg {
+          height: 7.1rem;
+          margin-top: 12rem;
+        }
+      }
+      .own-share {
+        margin-top: 3.2rem;
+        padding: 0;
+        height: 5.5rem;
+        width: 52rem;
+        background-color: #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mobile-lg {
+          width: 26rem;
+          height: 2.8rem;
+          margin-top: 1.6rem;
+        }
+
+        span {
+          color: $white;
+          font-size: 1.6rem;
+          letter-spacing: 0.9rem;
+          line-height: 1.6rem;
+          text-transform: uppercase;
+          white-space: nowrap;
+          display: block;
+
+          @include mobile-lg {
+            width: 18.8rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.44rem;
+            line-height: 1em;
+          }
+        }
+      }
+      .introduce-token {
+        margin-top: 18.6rem;
+
+        @include mobile-lg {
+          margin-top: 11.1rem;
+        }
+
+        > h3 {
+          margin: 0;
+        }
+        > p {
+          margin: 3rem auto 0;
+
+          @include mobile-lg {
+            width: 33rem;
+            max-width: calc(100% - 2rem);
+
+            > br {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 70.4rem;
+      margin: 0 auto;
+
+      @include mobile-lg {
+        justify-content: center;
+        padding: 0 1.6rem;
+        width: 100%;
+
+        > a {
+          width: calc(50% - 1.35rem);
+
+          &:nth-of-type(2) {
+            margin-left: 2.7rem;
+          }
+        }
+      }
+    }
+  }
+
+  .genesis-section {
+    margin-top: 32rem;
+    margin-bottom: 65rem;
+    position: relative;
+
+    @include mobile-lg {
+      margin-top: 10.4rem;
+      margin-bottom: 82rem;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -35%);
+      width: 15rem;
+      height: 15rem;
+      background: center/cover no-repeat url("../static/images/oval1.png");
+    }
+
+    .slider-genesis {
+      padding-top: 12.5rem;
+      pointer-events: none;
+
+      @include mobile-lg {
+        padding-top: 8.4rem;
+        z-index: 2;
+      }
+
+      > button {
+        display: none !important;
+      }
+
+      .slick-list {
+        background-color: #121617;
+        border-top: 1.2rem solid #0c1011;
+        border-bottom: 1.2rem solid #0c1011;
+        padding: 3rem 0;
+        height: 14rem;
+
+        @include mobile-lg {
+          height: 2.2rem;
+          padding: 0.2rem 0;
+          border-width: 0.3rem;
+        }
+      }
+      .slick-slide {
+        padding: 0 5rem;
+
+        @include mobile-lg {
+          padding: 0 1.1rem;
+        }
+      }
+      .sliding-text__wrapper {
+        span {
+          color: $black;
+          font-size: 7.2rem;
+          font-style: italic;
+          letter-spacing: 0.36rem;
+          line-height: 6.5rem;
+          text-align: center;
+          text-transform: uppercase;
+          font-family: "Digital-7 Italic";
+          -webkit-text-stroke: 0.1rem $yellow;
+
+          @include mobile-lg {
+            font-size: 1.44rem;
+            letter-spacing: 0.072rem;
+            line-height: 1.3rem;
+            -webkit-text-stroke: 0.02rem $yellow;
+          }
+        }
+      }
+    }
+    .triangle {
+      width: 100%;
+      height: 150rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+      background: center top/calc(100vw - 15rem) auto no-repeat
+        url("../static/images/mesh.png");
+      clip-path: polygon(50% 0%, 100% 55vw, 100% 100%, 0 100%, 0 54vw);
+      background-color: #060a0b;
+      z-index: 1;
+
+      @include mobile-lg {
+        height: 81rem;
+        background-size: auto 49rem;
+      }
+
+      > img {
+        position: absolute;
+        left: 50%;
+        bottom: 11rem;
+        transform: translateX(-50%);
+        width: 80rem;
+        object-fit: contain;
+
+        @include mobile-lg {
+          width: 30rem;
+          bottom: 44rem;
+        }
+      }
+    }
+    .genesis {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      margin-top: 8rem;
+      z-index: 1;
+
+      @include mobile-lg {
+        position: absolute;
+        left: 50%;
+        top: 48rem;
+        transform: translateX(-50%);
+        margin-top: 3.7rem;
+        width: 100%;
+      }
+
+      > h3 {
+        width: 100%;
+        display: block;
+        margin: auto 0;
+        white-space: nowrap;
+      }
+      > p {
+        margin: 5rem auto 6rem;
+
+        @include mobile-lg {
+          margin: 3.5rem auto 4rem;
+        }
+      }
+      > a {
+        margin-top: 6rem;
+      }
+      .count-down {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        > * {
+          opacity: 0.78;
+          color: $white;
+          font-family: Digital-7;
+          font-size: 8.2rem;
+          letter-spacing: 0.41rem;
+          line-height: 7.5rem;
+          text-align: center;
+          -webkit-text-stroke: 0.05rem $yellow;
+
+          @include mobile-lg {
+            font-size: 4.92rem;
+            letter-spacing: 0.246rem;
+            line-height: 4.5rem;
+          }
+
+          &.segment {
+            position: relative;
+
+            &::before {
+              position: absolute;
+              left: 50%;
+              top: -2rem;
+              transform: translate(-50%, -50%);
+              text-transform: uppercase;
+              opacity: 0.5;
+              color: #ffffff;
+              font-family: Industry-Book;
+              font-size: 1.4rem;
+              letter-spacing: 0.07rem;
+              line-height: 3rem;
+              text-align: center;
+              -webkit-text-stroke: 0;
+
+              @include mobile-lg {
+                font-size: 1.2rem;
+                line-height: 2rem;
+              }
+            }
+
+            &:nth-of-type(1)::before {
+              content: "days";
+            }
+            &:nth-of-type(2)::before {
+              content: "hrs";
+            }
+            &:nth-of-type(3)::before {
+              content: "mins";
+            }
+            &:nth-of-type(4)::before {
+              content: "secs";
+            }
+          }
+          &.splitter {
+            padding: 0 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .vertical-links__section {
+    width: 100%;
+    height: 80rem;
+    position: relative;
+    z-index: 1;
+    background: center top/calc(100% - 56rem) auto no-repeat
+      url("../static/images/proposal_watermark_bg.svg");
+
+    @include mobile-lg {
+      display: none;
+    }
+
+    > a {
+      &:nth-of-type(1) {
+        position: absolute;
+        left: calc((100vw - 52rem) * 0.02 + 26rem);
+        top: 10rem;
+      }
+      &:nth-of-type(2) {
+        position: absolute;
+        left: calc((100vw - 52rem) * 0.155 + 26rem);
+        top: -1rem;
+      }
+      &:nth-of-type(3) {
+        position: absolute;
+        left: calc((100vw - 52rem) * 0.23 + 26rem);
+        top: 44rem;
+      }
+      &:nth-of-type(4) {
+        position: absolute;
+        left: calc((100vw - 52rem) * 0.27 + 26rem);
+        top: 24rem;
+      }
+      &:nth-of-type(5) {
+        position: absolute;
+        left: calc((100vw - 52rem) * 0.41 + 26rem);
+        top: 16rem;
+      }
+      &:nth-of-type(6) {
+        position: absolute;
+        left: calc((100vw - 52rem) * 0.45 + 26rem);
+        top: 34rem;
+      }
+      &:nth-of-type(7) {
+        position: absolute;
+        left: calc((100vw - 52rem) * 0.615 + 26rem);
+        top: 42rem;
+      }
+      &:nth-of-type(8) {
+        position: absolute;
+        left: calc((100vw - 52rem) * 0.705 + 26rem);
+        top: 15rem;
+      }
+      &:nth-of-type(9) {
+        position: absolute;
+        left: calc((100vw - 52rem) * 0.745 + 26rem);
+        top: 43rem;
+      }
+      &:nth-of-type(10) {
+        position: absolute;
+        left: calc((100vw - 52rem) * 0.79 + 26rem);
+        top: -2rem;
+      }
+      &:nth-of-type(11) {
+        position: absolute;
+        left: calc((100vw - 52rem) * 0.925 + 26rem);
+        top: 22.5rem;
+      }
+    }
+  }
+
+  .community-section {
+    > h3 {
+      margin: 9.2rem 0 0;
+    }
+    > p {
+      margin: 5rem 0 8.9rem;
+
+      @include mobile-lg {
+        margin: 3rem auto 3.7rem;
+      }
+    }
+    .comments {
+      max-width: 100%;
+      overflow: hidden;
+      > div {
+        display: flex;
+        align-items: center;
+        &.comments-first__line {
+          transform: translateX(-40rem);
+
+          @include mobile-lg {
+            transform: translateX(-18rem);
+          }
+        }
+        &.comments-second__line {
+          transform: translateX(-60rem);
+          margin-top: 4.8rem;
+
+          @include mobile-lg {
+            margin-top: 1.92rem;
+            transform: translateX(-25rem);
+          }
+        }
+        &.comments-third__line {
+          @include mobile-lg {
+            margin-top: 1.92rem;
+            transform: translateX(-3rem);
+          }
+        }
+      }
+    }
+    .slider-community {
+      padding-top: 18.6rem;
+
+      @include mobile-lg {
+        display: none;
+      }
+
+      > button {
+        display: none !important;
+      }
+
+      .slick-list {
+        max-height: 39rem;
+      }
+      .slick-slide {
+        display: flex;
+        align-items: center;
+        padding: 0 4.5rem;
+        height: 39rem;
+        position: relative;
+
+        &:hover {
+          &::before {
+            opacity: 0.6;
+          }
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: center/100% 100% no-repeat
+            url("../static/images/oval2.png");
+          opacity: 0.45;
+          @include transitionEffect;
+        }
+      }
+      .sliding-text__wrapper {
+        text-decoration: none;
+
+        span {
+          color: $black;
+          opacity: 0.8;
+          color: #633661;
+          font-family: Digitalix;
+          font-size: 12rem;
+          letter-spacing: 0.6rem;
+          line-height: 12rem;
+          text-align: center;
+          text-transform: uppercase;
+          white-space: nowrap;
+          -webkit-text-stroke: 0.3rem #251a2c;
+        }
+      }
+    }
+  }
+
+  // common styles
+  h3.title {
+    color: $yellow;
+    font-family: Digitalix;
+    font-size: 1.6rem;
+    letter-spacing: 0.08rem;
+    line-height: 1.6rem;
+    text-align: center;
+
+    @include mobile-lg {
+      font-size: 0.86rem;
+      letter-spacing: 0.05em;
+      line-height: 1em;
+    }
+  }
+  p.description {
+    color: $white;
+    font-family: Industry-Book;
+    font-size: 1.4rem;
+    letter-spacing: 0.07rem;
+    line-height: 3rem;
+    text-align: center;
+
+    @include mobile-lg {
+      font-size: 0.76rem;
+      line-height: 1.62rem;
+      letter-spacing: 0.038rem;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "./static/scss/base.scss";
+
+// Common Styles
+* {
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+body {
+  min-width: $bp-mobile-xs;
+  margin: 0 auto;
+  padding: 0;
+  font-family: Digitalix;
+  background-color: #060a0b;
+}
+
+/* Breakpoints */
+html {
+  font-size: 62.5%;
+
+  @include desktop-lg {
+    font-size: 56.5%;
+  }
+  @include desktop-sm {
+    font-size: 48.5%;
+  }
+  @include tablet-lg {
+    font-size: 41.5%;
+  }
+  @include tablet-sm {
+    font-size: 36%;
+  }
+  @include mobile-lg {
+    font-size: 68.5%;
+  }
+  @include mobile-md {
+    font-size: 62.5%;
+  }
+  @include mobile-sm {
+    font-size: 59.5%;
+  }
+}

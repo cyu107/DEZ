@@ -1,0 +1,101 @@
+@import "../../static/scss/base.scss";
+
+.cowboy-button__wrapper {
+  height: 11.5rem;
+  width: 32.7rem;
+  border-radius: 0.8rem;
+  border: 0.4rem solid rgba(25, 148, 130, 0.36);
+  background: #74287a;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+
+  @include mobile-lg {
+    max-width: 19.7rem;
+    height: 7rem;
+    border-width: 0.22rem;
+    border-radius: 0.43rem;
+  }
+
+  &:hover {
+    background: linear-gradient(110deg, #6176b4 0%, #6579b5 30%, #8c3995 100%);
+    border: none;
+
+    .info-tooltip {
+      display: flex;
+
+      @include mobile-lg {
+        display: none;
+      }
+    }
+  }
+
+  &.disabled {
+    border: 0.4rem solid rgba(255, 255, 255, 0.2);
+    background: rgba(136, 72, 137, 0.3);
+    color: $white;
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  > span {
+    color: $white;
+    font-family: Digitalix;
+    font-size: 1.6rem;
+    letter-spacing: 0.08rem;
+    line-height: 1.6rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    @include mobile-lg {
+      font-size: 0.86rem;
+      letter-spacing: 0.043rem;
+      line-height: 0.9rem;
+    }
+  }
+  .info-tooltip {
+    position: absolute;
+    width: auto;
+    height: 4rem;
+    padding: 0 2rem 0 0.5rem;
+    border-radius: 2rem;
+    background-color: $gray;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-2.3rem, -50%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 1.3rem;
+      bottom: -0.8rem;
+      height: 0;
+      border-top: 1rem solid $gray;
+      border-left: 1rem solid transparent;
+    }
+
+    img {
+      width: 3rem;
+      object-fit: contain;
+      margin-right: 0.5rem;
+    }
+    p {
+      color: #060909;
+      font-family: Industry-Bold;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: normal;
+      line-height: 3.3rem;
+      text-align: center;
+    }
+  }
+}

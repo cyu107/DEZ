@@ -1,0 +1,39 @@
+@import "../../static/scss/base.scss";
+
+.comment-link_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  height: 14.1rem;
+  min-width: 55rem;
+  color: #c1d7dc;
+  border: 0.02rem solid #121315;
+  border-radius: 1.2rem;
+  margin: 0 2.4rem;
+  padding: 0 5rem;
+  font-family: Industry-Book;
+  font-size: 1.4rem;
+  letter-spacing: 0.07rem;
+  line-height: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  @include transitionEffect;
+
+  @include mobile-lg {
+    height: 5.64rem;
+    min-width: 25.28rem;
+    border-width: 0.08rem;
+    border-radius: 0.48rem;
+    font-size: 0.5rem;
+    letter-spacing: 0.028rem;
+    line-height: 2em;
+    margin: 0 0.96rem;
+    padding: 0 2rem;
+  }
+
+  &:hover {
+    border-color: #004a5b;
+    color: $white;
+  }
+}

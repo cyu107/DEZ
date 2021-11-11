@@ -1,0 +1,43 @@
+@import "./variables";
+
+// media query mixins
+@mixin desktop-lg {
+  @media (max-width: $bp-desktop-lg) {
+    @content;
+  }
+}
+@mixin desktop-sm {
+  @media (max-width: $bp-desktop-sm) {
+    @content;
+  }
+}
+@mixin tablet-lg {
+  @media (max-width: $bp-tablet-lg) {
+    @content;
+  }
+}
+@mixin tablet-sm {
+  @media (max-width: $bp-tablet-sm) {
+    @content;
+  }
+}
+@mixin mobile-lg {
+  @media (max-width: $bp-mobile-lg) {
+    @content;
+  }
+}
+@mixin mobile-md {
+  @media (max-width: $bp-mobile-md) {
+    @content;
+  }
+}
+@mixin mobile-sm {
+  @media (max-width: $bp-mobile-sm) {
+    @content;
+  }
+}
+
+// css effect mixins
+@mixin transitionEffect {
+  transition: all 0.3s ease-out;
+}

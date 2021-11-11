@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="210px" height="185px" viewBox="0 0 210 185" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>DEZ logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="-24.0753912%" id="linearGradient-1">
+            <stop stop-color="#E773FF" offset="0%"></stop>
+            <stop stop-color="#00FFE7" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="-24.0753912%" id="linearGradient-2">
+            <stop stop-color="#E773FF" offset="0%"></stop>
+            <stop stop-color="#00FFE7" offset="100%"></stop>
+        </linearGradient>
+        <text id="text-3" font-family="Digitalix" font-size="140" font-weight="normal" letter-spacing="7" fill="#FFFFFF">
+            <tspan x="342.110843" y="112">D</tspan>
+        </text>
+        <filter x="-11.2%" y="-38.8%" width="122.5%" height="177.5%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="18" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.997151559   0 0 0 0 0.793921494  0 0 0 0.185396635 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-685.000000, -233.000000)">
+            <g id="DEZ-logo" transform="translate(380.000000, 264.000000)">
+                <text id="D" fill="url(#linearGradient-1)" opacity="0.300000012" font-family="Digitalix" font-size="140" font-weight="normal" letter-spacing="7">
+                    <tspan x="342.027344" y="112">D</tspan>
+                </text>
+                <text id="D" fill="url(#linearGradient-2)" opacity="0.498674665" font-family="Digitalix" font-size="140" font-weight="normal" letter-spacing="7">
+                    <tspan x="342.110843" y="126">D</tspan>
+                </text>
+                <g id="D" stroke="#199482" stroke-opacity="0.693591565" stroke-width="0.5">
+                    <use fill="#FFFFFF" fill-opacity="1" filter="url(#filter-4)" xlink:href="#text-3"></use>
+                    <use fill="#FFFFFF" fill-opacity="1" xlink:href="#text-3"></use>
+                    <use xlink:href="#text-3"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

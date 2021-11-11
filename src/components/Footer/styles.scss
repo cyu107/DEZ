@@ -1,0 +1,96 @@
+@import "../../static/scss/base.scss";
+
+.footer-wrapper {
+  margin-top: 25rem;
+  width: 100%;
+  height: 10rem;
+  background: center/cover repeat-x url("../../static/images/net1.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mobile-lg {
+    margin-top: 10rem;
+    flex-direction: column;
+    height: auto;
+    background: none;
+  }
+
+  .footer-links {
+    width: 100%;
+    height: 80rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 9.5rem 0;
+    margin: 0;
+    background: top center/cover repeat-x url("../../static/images/net2.png");
+
+    li {
+      width: 100%;
+      display: grid;
+      align-content: center;
+      justify-content: center;
+
+      // hacks for iOS X safari
+      &:nth-child(1) > a {
+        width: 28rem;
+      }
+      &:nth-child(2) > a {
+        width: 22rem;
+      }
+      &:nth-child(3) > a {
+        width: 22rem;
+      }
+      &:nth-child(4) > a {
+        width: 20rem;
+      }
+      &:nth-child(5) > a {
+        width: 25rem;
+      }
+      &:nth-child(6) > a {
+        width: 16rem;
+      }
+
+      a {
+        font-family: Digitalix;
+        font-size: 1.1rem;
+        letter-spacing: 0.688rem;
+        line-height: 3rem;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        white-space: nowrap;
+        color: #88acf5;
+        // background: -webkit-linear-gradient(90deg, #a89af9, #6cbdf2 80%);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        cursor: pointer;
+        @include transitionEffect;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+  p {
+    color: #ffffff;
+    font-family: Industry-Bold;
+    font-size: 1.4rem;
+    letter-spacing: 0.15rem;
+    line-height: 4rem;
+    text-align: center;
+    background: -webkit-linear-gradient(-90deg, #9798b9, #9182ab 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include mobile-lg {
+      padding: 6.4rem 0;
+      font-size: 0.7rem;
+      letter-spacing: 0.075rem;
+      line-height: 2rem;
+    }
+  }
+}
